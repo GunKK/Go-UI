@@ -1,0 +1,47 @@
+@use "../../abstracts/" as Abstract;
+
+.hosts {
+
+    &__heading {
+        --mb: 20px
+    }
+
+    &__list {
+        --gap: 12px;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: var(--gap);
+    }
+
+    &__item {
+        --gap-item: 7px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;       
+        gap: var(--gap-item);
+        
+        &-avt {
+            --avt-size: 64px;
+            background-color: hsla(14, 100%, 82%, 1);
+            width: var(--avt-size);
+            height: var(--avt-size);
+            overflow: hidden;
+            box-shadow: 0 0 0 2px #fff, 0 0 0 3px hsla(14, 100%, 82%, 1);
+            @include Abstract.rounded("rounded-circle");
+            
+            &-img {
+                aspect-ratio: 1;
+                object-fit: cover;
+            }
+        }
+
+        &-name {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            @include Abstract.normalText();
+        }
+    }
+}

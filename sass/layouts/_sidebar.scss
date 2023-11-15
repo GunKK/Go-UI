@@ -1,0 +1,64 @@
+@use "../abstracts/" as Abstract;
+
+.sidebar {
+    padding: 48px 30px;
+    border-right: 1px solid Abstract.$sidebar-line;
+
+    &__logo {
+        display: block; 
+        color: var(Abstract.$bg-color);
+    
+        &-img {
+            max-width: 100%;
+            display: block;
+            margin-bottom: 44px;
+        }
+    }
+    
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;list-style: none;
+        --gap: 26px;
+    
+        &:not(:last-child)::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background-color: Abstract.$sidebar-line;
+            margin-block: var(--gap);
+        }
+    }
+    
+    &__item {
+    
+    
+        &-link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 30px 8px 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 12px;
+            line-height: 1.5;
+            color: Abstract.$gray-1;
+            transition: ease-in 0.08s;
+
+            &-img {
+                width: 24px;
+                height: 24px;
+            }
+        
+            &:hover {
+                background-color: Abstract.$primary-color;
+                color: Abstract.$text-white;
+            }
+        }
+    }
+}
+
+
+

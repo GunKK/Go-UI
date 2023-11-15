@@ -1,0 +1,61 @@
+@use "../../abstracts/" as Abstract;
+
+.trending {
+    padding: 55px 0 36px 0;
+
+    &__heading {
+        --mb: 12px
+    }
+
+    &__body {
+        padding: 20px;
+        background-color: Abstract.$gray-natural-1;
+        @include Abstract.rounded("rounded-1");
+        color: Abstract.$black-color;
+        box-shadow: 1px 1px 10px Abstract.$black-color-1;
+        position: relative;
+
+        &-title {
+            font-size: 22px;
+            margin-bottom: 11px;
+            font-weight: 600;
+            & span:first-child {
+                color: Abstract.$primary-color !important;
+            }
+        }
+
+        &-podcast {
+            margin-bottom: 4px;
+            font-size: 14px;
+            color: Abstract.$text-dark;
+            font-weight: 400;
+        }
+
+        &-author {
+            font-size: 14px;
+            margin-bottom: 20px;
+
+            & span:last-child {
+                color: Abstract.$text-dark;
+            }
+        }
+        &-button {
+            gap: 10px;
+        }
+    }
+
+    &__vector {
+        position: absolute;
+        width: 36px;
+        top: 2%;
+        right: 2%;
+        z-index: 2;
+    }
+
+    &__man {
+        position: absolute;
+        width: 150px;
+        bottom: 0;
+        right: 10%;
+    }
+}

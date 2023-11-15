@@ -1,0 +1,27 @@
+@mixin rounded($value: "rounded-1") {
+    @if($value == "rounded-0") {
+        border-radius: 4px;
+    } @else if($value == "rounded-1") {
+        border-radius: 8px;
+    } @else if($value == "rounded-pill") {
+        border-radius: 50px;
+    } @else if ($value == "rounded-circle") {
+        border-radius: 50%;
+    }
+}
+
+@mixin hover() {
+    opacity: 0.8;
+}
+
+@mixin normalText() {
+    --max-width: 64px;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: var(--max-width);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,66 @@
+@use "../../abstracts/" as Abstract;
+
+.listen-history {
+    margin-bottom: 40px;
+
+    &__list {
+        list-style: none;
+        --gap: 10px;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 18px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--gap);
+
+        &-img {
+            flex: 0 0 109px;
+            height: 77px;
+            width: 100%;
+            @include Abstract.rounded("rounded-1");
+            overflow: hidden;
+        }
+
+        &-wrapper {
+            flex-grow: 1;
+        }
+
+        &-title {
+            font-weight: 500;
+            line-height: 1.5;
+            margin: 4px 0px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+        }
+
+        &-func {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            gap: 16px;
+
+            &-view {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 4px;
+                & img {
+
+                }
+
+                & span {
+                }
+            }
+        }
+    }
+}

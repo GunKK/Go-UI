@@ -1,0 +1,211 @@
+@use "../../abstracts/" as Abstract;
+
+.feed {
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        
+        &__menu {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-bottom: 1px solid Abstract.$sidebar-line;
+        }
+
+        &__item {
+            
+            button {
+                padding: 10px;
+                cursor: pointer;
+                font-weight: 400;
+                font-size: 14px;
+                color: Abstract.$gray-5e;
+            }
+
+            &--active {
+                & button {
+                    border-bottom: 1px solid Abstract.$primary-color;
+                    font-weight: 600;
+                    color: Abstract.$primary-color;
+                }
+            }
+        }
+    
+        &__right {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+
+            &-desc {
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+    
+    &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+
+    &__item {
+        border: 1px solid Abstract.$sidebar-line;
+        @include Abstract.rounded("rounded-1");
+        overflow: hidden;
+        width: 100%;
+        background-color: #F8F8F8;
+
+        &-header {
+            border-bottom: 1px solid Abstract.$sidebar-line;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+            }
+
+            &-avt {
+                width: 48px;
+                @include Abstract.rounded("rounded-circle");                
+                position: relative;
+                z-index: 1;
+
+                &-img {
+                    width: 100%;
+                    border-radius: inherit;
+                    aspect-ratio: 1;
+                }
+                
+                &-verify {
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+
+            &-author {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 4px;
+
+                &-info {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 8px;
+                }
+
+                &-name {
+                    display: block;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+
+                &-desc {
+                    font-weight: 400;
+                }
+
+                &-date {
+                    font-weight: 400;
+                    color: Abstract.$gray-a6;
+                } 
+
+                &-star {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 2px;
+                    & img {
+                        width: 16px;
+                    }
+                }
+            }
+        }
+
+        &-body {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid Abstract.$sidebar-line;
+
+            &-img {
+                flex: 0 0 152px;
+                @include Abstract.rounded("rounded-1");
+                overflow: hidden;
+                height: 100%;
+            
+                & img {
+                    object-fit: cover;
+                    height: 100%;
+                    aspect-ratio: 1;
+                }
+            }
+
+            &-wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &-title {
+                color: Abstract.$gray-a6;
+                font-weight: 400;
+                line-height: 1.5;
+                margin-bottom: 6px;
+                font-size: 14px;
+            }
+
+            &-subtitle {
+
+            }
+
+            &-desc {
+                margin-top: 16px;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 1.5;
+            }
+
+        }
+
+        &-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+
+            &-action {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px;
+                & button:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

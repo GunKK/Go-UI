@@ -1,0 +1,29 @@
+@use "../abstracts/" as Abstract;
+
+.button {
+    padding: 8px 14px;
+    min-width: 74px;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    background-color: Abstract.$primary-color;
+    @include Abstract.rounded("rounded-1");
+    color: Abstract.$text-white;
+    font-weight: 600;
+    transition: ease-in 0.2s;
+    
+    &--primary {
+        background-color: Abstract.$primary-color;
+        color: Abstract.$text-white;
+    }
+    
+    &:hover {
+        @include Abstract.hover();
+    }
+}

@@ -1,0 +1,22 @@
+@forward "./hosts";
+@forward "./podcast";
+@forward "./trending";
+@forward "./follower";
+@forward "./history";
+@forward "./topic";
+@forward "./feed";
+
+.home-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+}
+
+.home-left {
+    flex: 2 1 0;
+}
+
+.home-right {
+    flex: 1 1 0;
+}

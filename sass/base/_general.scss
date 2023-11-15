@@ -1,0 +1,27 @@
+.heading {
+    --mb: 0;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: var(--mb);
+    letter-spacing: 2px;
+}
+
+.widget {
+    --mb: 20px;
+    margin-bottom: var(--mb);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__heading {
+        margin-bottom: var(--mb);
+    }
+
+    &__view-all {
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 400;
+        color: #a5a6b1;
+    }
+}

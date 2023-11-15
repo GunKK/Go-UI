@@ -1,0 +1,67 @@
+@use "../../abstracts/" as Abstract;
+
+.follower {
+    margin-bottom: 40px;
+
+    &__list {
+        list-style: none;
+        display: grid;
+        gap: 20px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        &-user {
+            height: 100%;
+            --gap: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: var(--gap); 
+            
+            &-img {
+                width: 46px;
+                @include Abstract.rounded("rounded-0");
+                overflow: hidden;
+                box-shadow: 0 0 0 2px Abstract.$bg-color, 0 0 0 3px Abstract.$primary-color;
+                
+                & img {
+                    aspect-ratio: 1;
+                    object-fit: cover;
+                }
+            }
+
+            &-info {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-start;
+                
+                &-name {
+                    --max-width: 150px !important;
+                    @include Abstract.normalText();
+                }
+
+                &-tag {
+                    text-decoration: none;
+                    color: Abstract.$text-dark;
+                    transition: ease-in 0.5s;
+                    --max-width: 150px !important;
+                    @include Abstract.normalText();
+
+                    &:hover {
+                        color: Abstract.$primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
