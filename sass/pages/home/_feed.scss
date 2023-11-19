@@ -209,3 +209,42 @@
         }
     }
 }
+
+@media screen and (max-width: 767.98px) {
+    .feed {
+        &-header {
+            &__right {
+                &-desc {
+                    display: none;
+                }
+            }
+        }
+
+        &__item {
+            &-header {
+                &-avt {
+                    width: 60px;
+                }
+                &-author-info {
+                    display: block;
+                }
+            }
+
+            &-body {
+                flex-direction: column;
+                
+                &-img {
+                    width: 100%;
+
+                    & img {
+                        width: 100%;
+                    }
+                } 
+            }
+
+            &-footer-btn button {
+                height: 44px;
+            }
+        }
+    }
+}

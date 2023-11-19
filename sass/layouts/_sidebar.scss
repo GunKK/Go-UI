@@ -3,6 +3,26 @@
 .sidebar {
     padding: 48px 30px;
     border-right: 1px solid Abstract.$sidebar-line;
+    position: relative;
+
+    &__close-btn {
+        // display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 16px;
+        font-weight: 600;
+        border: 1px solid Abstract.$sidebar-line;
+        color: Abstract.$text-dark;
+        @include Abstract.rounded("rounded-0");
+        margin: 10px !important;
+        transition: ease-in 0.2s;
+
+        &:hover {
+            background-color: red;
+            color: Abstract.$text-white;
+        } 
+    }
 
     &__logo {
         display: block; 
@@ -56,6 +76,33 @@
                 background-color: Abstract.$primary-color;
                 color: Abstract.$text-white;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1279.98px) {
+    .sidebar {
+        // when close sidebar
+        width: 0px; 
+        // when open sidebar
+        // width: 250px
+        height: 100%;
+        position: fixed;
+        z-index: 11;
+        background-color: Abstract.$bg-menu;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding: 10px 0px;
+
+        &__logo-img {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        & > * {
+            margin: 0 10px;
         }
     }
 }

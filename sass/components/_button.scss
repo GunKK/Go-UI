@@ -22,6 +22,13 @@
         background-color: Abstract.$primary-color;
         color: Abstract.$text-white;
     }
+
+    &--outline-secondary {
+        background-color: Abstract.$bg-color;
+        font-weight: 400;
+        color: Abstract.$gray-a6;
+        border: 1px solid Abstract.$gray-a6;
+    }
     
     &:hover {
         @include Abstract.hover();

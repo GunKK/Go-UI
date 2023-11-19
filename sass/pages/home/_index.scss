@@ -20,3 +20,10 @@
 .home-right {
     flex: 1 1 0;
 }
+
+@media screen and (max-width: 1279.98px) {
+    .home-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

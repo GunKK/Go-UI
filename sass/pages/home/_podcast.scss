@@ -24,3 +24,12 @@
         }
     }
 }
+
+@media screen and (max-width: 767.98px) {
+    .podcast {
+        &__list {
+            --gap: 8px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
