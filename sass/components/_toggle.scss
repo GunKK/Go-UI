@@ -29,3 +29,21 @@
         transition: all 0.2s linear;
     }
 }
+
+@media screen and (max-width: 1279.98px) {
+    .toggle {
+        &-main {
+            height: 28px;
+            width: 52px;
+            padding: 4px;;
+        }
+        input {
+            &:checked + .toggle-main .toggle-spinner {
+                transform: translateX(24px);
+            }
+        }
+        &-spinner {
+            width: 20px;
+        }
+    }
+}
